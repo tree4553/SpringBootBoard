@@ -13,10 +13,8 @@
 <body>
 
     <main>
-        <div class="container" th:replace="fragments/common :: menu('home')">
-            
-        </div>
-        <div class="home">
+        <div th:replace="fragments/common :: menu('home')"></div>
+        <div class="container">
             <h1>Spring Boot Board</h1>
             <p class="lead">Spring Boot를 이용한 게시판 구현</p>
         </div>
