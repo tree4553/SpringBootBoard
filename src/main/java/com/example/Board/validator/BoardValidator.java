@@ -19,7 +19,7 @@ public class BoardValidator implements Validator {
     public void validate(Object target, Errors errors) {
         Board b = (Board) target;
         if(StringUtils.isEmpty(b.getContent())) {
-            errors.rejectValue("content", "key", "Enter content.");
+            errors.rejectValue("content", "key", "Please enter content.");
         }
     }
 }
