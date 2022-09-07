@@ -12,7 +12,6 @@
 
 <body>
     <div th:fragment="menu(menu)">
-        <!-- <nav class="navbar navbar-expand-lg bg-light"> -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">Spring Boot Board</a>
@@ -30,32 +29,6 @@
             </div>
         </nav>
     </div>
-    <!-- <div class="container" th:fragment="menu(menu)"> -->
-    <!-- <nav class="navbar navbar-dark bg-dark" th:fragment="menu(menu)"> -->
-        <!-- <div th:fragment="menu(menu)"> -->
-        <!-- <div>
-            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32">
-                        <use xlink:href="#bootstrap" />
-                    </svg>
-                    <span class="fs-4">Spring Boot Board</span>
-                </a>
-
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a href="#" th:href="@{/}" class="nav-link" th:classappend="${menu} == 'home'? 'active'"
-                            th:attr="aria-current=${menu} == 'home'?'page'">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" th:href="@{/board/list}" class="nav-link"
-                            th:classappend="${menu} == 'board'? 'active'"
-                            th:attr="aria-current=${menu} == 'board'?'page'">Board</a>
-                    </li>
-                </ul>
-            </header>
-        </div>
-    </nav> -->
 </body>
 
 </html>
