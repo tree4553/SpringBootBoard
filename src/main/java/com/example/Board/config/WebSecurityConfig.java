@@ -39,18 +39,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
             throws Exception {
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
-                //.passwordEncoder(passwordEncoder())
+                .passwordEncoder(passwordEncoder())
                 .usersByUsernameQuery("select username,password,enabled "
                         + "from user "
                         + "where username = ?")
-                .authoritiesByUsernameQuery("select username,name "
+                .authoritiesByUsernameQuery("select u.username, r.name "
                         + "from user_role ur inner join user u on ur.user_id = u.id "
                         + "inner join role r on ur.role_id = r.id "
                         + "where username = ?");
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
+    public static PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 }
